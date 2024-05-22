@@ -35,6 +35,7 @@ p {
     padding-left: 20px; /* Adds padding to the left of the paragraph element */
     padding-right: 20px; /* Adds padding to the right of the paragraph element */
     color: #fff;
+    text-align: center;
 }
 
 /* Paragraph element hover effect */
@@ -137,8 +138,8 @@ footer {
     font-size: 20px; /* This specifies the font size for text on our navbar */
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveNavText 1s; /* Animation for Safari 4.0 - 8.0 */
-    animation: moveNavText 1s; /* Applies the moveNavText animation for 5.75s */ 
+    -webkit-animation: moveNavText .25s; /* Animation for Safari 4.0 - 8.0 */
+    animation: moveNavText .25s; /* Applies the moveNavText animation for 5.75s */ 
 }
 
 /* moveNavText animation effect for moving the navbar text from above the view to the navbar */
@@ -278,7 +279,7 @@ input[type=submit] {
     display: block; /* Allows the submit button to be centered */
     margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
     margin-right: auto;
-    font-family: Perpetua, Rockwell Extra Bold;
+    font-family: "Rubik", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Hover effect for submit button */
@@ -294,7 +295,7 @@ form {
     border-radius: 5px; /* Rounds the corners of the contact form */
     background-color: rgba(0, 0, 0, 0); 
     padding: 10px; /* Adds padding to the contact form */
-    font-family: "Trebuchet MS", Optima;
+    font-family: "Rubik", Verdana, Geneva, Tahoma, sans-serif;
 }
 /***** END OF CONTACT FORM STYLING *****/
 
