@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- HEAD -->
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kevin Guarnes Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <!-- BODY -->
+
+    <body class="Background">
+
+        <!-- NAVBAR -->
+
+        <div class="Navbar">
+            <a class="active" href="#Home"><i class="fas fa-home"></i></a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!-- END NAVBAR -->
+
+        <br>
+        <br>
+
+        <!-- BACKGROUND VIDEO -->
+        
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="images/video/Typing.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!-- END BACKGROUND VIDEO -->
+
+        <!-- TEXT IN VIDEO -->
+        <div class="Video_Text">
+            <h1 class="white-text">Kevin Guarnes' Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Do or do not.
+                        <br>There is no try.
+                    </q>
+                    <br> - Yoda
+                </p>
+            </strong>
+        </div>
+
+        <!-- END TEXT IN VIDEO -->
+
+        <!-- ABOUT SECTION -->
+
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="images/about.jpg" alt="photo of tech student">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>Excited to embark on a new journey in Cyber Security! I'm currently a student undergoing intensive training to pivot my career toward this dynamic field. 
+                    I've invested in developing new skills that align with my passion for technology and security. 
+                    With a background in operational excellence and team leadership from the hospitality sector, I'm now applying my strategic abilities to cybersecurity and looking forward to contributing innovative solutions to protect organizations from cyber threats.
+                </p>
+            </div>
+        </div>
+
+        <!-- END ABOUT SECTION -->
+
+        <!-- GITHUB SECTION -->
+
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p class="center">
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/kevinguarnes" target="_blank">Kevin Guarnes' Github</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/kevinguarnes" target="_blank"><img src="images/github.jpg" alt="funny github meme"></a>
+            </div>
+        </div>
+
+        <!-- END GITHUB SECTION -->
+
+        <!-- CONTACT SECTION -->
+
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="images/mail.jpg" alt="Contact_Image">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--This specifies where and how to send the form data; we are leaving it blank-->
+                <form action="https://formspree.io/f/xpzvepqz" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!-- END CONTACT SECTION -->
+
+        <!-- FOOTER SECTION -->
+        
+        <footer>
+			<p class="center">
+				<a href="https://x.com/kevinguarnes" target="_blank"><i class="fab fa-twitter"></i> X.com</a> |
+				<a href="https://instagram.com/kevingeee" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+				<a href="https://linkedin.com/in/kevinguarnes" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+				 <a href="https://facebook.com/kevinguarnes" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+				 <a href="mailto:kevinguarnes@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </p>
+			</p>
+			<p class="center">&copy; 2024 Kevin Guarnes. All rights reserved.</p>
+		</footer>
+		
+        <!-- FOOTER SECTION -->
+
+    </body>
+</html>
+
