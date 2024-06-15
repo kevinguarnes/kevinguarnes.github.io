@@ -1,179 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; 
+        style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; 
+        font-src 'self' https://cdnjs.cloudflare.com; 
+        img-src 'self' data:; 
+        object-src 'none'; 
+        base-uri 'self';
+        form-action 'self';
+        frame-ancestors 'none';">
+    <title>Kevin Guarnes</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="Background">   
+
+    <!-- NAVBAR -->
+    <div class="Navbar">
+        <a class="active" href="#Home"><i class="fas fa-home"></i></a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+    </div>
+
+    <!-- Background video -->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="images/video/Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Video text -->
+    <div class="Video_Text">
+        <h1 class="white-text">Kevin Guarnes' Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q>Do or do not.
+                <br>There is no try.
+                </q>
+                <br> - Yoda
+                <br>
+                <br>
+                Hello, I'm Kevin! Welcome to my cybersecurity portfolio. Here, you'll learn about my background, skills, and experiences in the cybersecurity field.
+                <br>
+                <br>
+                Thank you for visiting—enjoy exploring! 
+            </p>
+        </strong>
+    </div>
+
+    <!-- Slideshow section -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background"> 
+            <div id="Slideshow_Container">
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/me.jpg" alt="Picture of me">
+                    <div class="text">Passionate Cybersecurity Student dedicated to protecting digital assets and data.</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/cybersecurity01.jpg" alt="cybersecurity stock photo"> 
+                    <div class="text">Currently pursuing an education in Cybersecurity with a focus on ethical hacking and incident response.</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/cybersecurity02.jpg" alt="cybersecurity stock photo">
+                    <div class="text">Proficient in network security, penetration testing, and vulnerability assessment.</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/wireshark.png" alt="Wireshark Logo">
+                    <div class="text">Hands-on experience with tools like Wireshark and Burp Suite</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/comptiasecurity.png" alt="CompTIA Security+ Logo"> 
+                    <div class="text">Working on multiple certifications, including CompTIA Security+, Google Cybersecurity Professional Certificate, and TryHackMe SOC Level 1 Certificate.</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/contact.jpg" alt="contact photo"> 
+                    <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Get in touch with me today!</a></div> 
+                </div>
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+            </div>
+        </div>
+    </div>
+
+    <!-- About section -->
+    <div class="Row" id="About">
+        <div class="Column_2">
+            <img src="images/keyboard.jpg" alt="keyboard">
+        </div>
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>Excited to embark on a new journey in Cybersecurity, I'm a student undergoing intensive training to pivot my career towards this dynamic field. With a background in operational excellence and team leadership from the hospitality sector, I'm now applying my strategic abilities to cybersecurity and eager to contribute innovative solutions to protect organizations from cyber threats.</p>
+        </div>
+    </div>
+
+    <!-- GitHub section -->
+    <div class="Row" id="GitHub">
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>You can view my coding projects on my GitHub profile here:
+                <br>
+                <p class="center"><a href="https://github.com/kevinguarnes" target="_blank">Kevin Guarnes' Github</a></p>
+            </p>
+        </div>
+        <div class="Column_2">
+            <a href="https://github.com/kevinguarnes" target="_blank"><img src="images/github.jpg" alt="funny github meme"></a>
+        </div>
+    </div>
+
+    <!-- Contact form -->
+    <div id="Contact">
+       <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+       <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/xpzvepqz" method="POST" class="form-container">
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                  <input type="text" placeholder="Type your name here" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                  <input type="text" placeholder="Type your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>		
+                  <input type="text" placeholder="Type your email address here" name="email" required>
+                <label for="message"><b>Message</b></label>
+                  <input type="text" placeholder="Type your message here" name="message">
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+       </div>
+    </div>
     
-    <!-- HEAD -->
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
-        <title>Kevin Guarnes</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
-
-    <!-- BODY -->
-
-    <body class="Background">   
-
-        <!-- NAVBAR -->
-
-        <div class="Navbar">
-            <a class="active" href="#Home"><i class="fas fa-home"></i></a>
-            <!-- New section added -->
-            <a href="#Slideshow">Slideshow</a>
-            <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
-            <!-- Onclick and ondblclick functions added to open and close the contact form -->
-            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
-        </div>
-
-        <!-- Background video -->
-
-        <div id="Home">
-            <video autoplay muted loop id="Typing_Video">
-                <source src="images/video/Typing.mp4" type="video/mp4">
-                <!-- Display message if video fails to run -->
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
-
-        <!-- Video text -->
-
-        <div class="Video_Text">
-            <h1 class="white-text">Kevin Guarnes' Portfolio</h1>
-            <strong>
-                <p class="center">
-                    <q>Do or do not.
-                    <br>There is no try.
-                    </q>
-                    <br> - Yoda
-                    <br>
-                    <br>
-                    Hello, I'm Kevin! Welcome to my cybersecurity portfolio. Here, you'll learn about my background, skills, and experiences in the cybersecurity field.
-                    <br>
-                    <br>
-                    Thank you for visiting—enjoy exploring! 
-                </p>
-            </strong>
-        </div>
-
-        <!-- Slideshow section added -->
-        <div id="Slideshow">
-            <div id="Slideshow_Background"> 
-                <div id="Slideshow_Container">
-                    <!-- Slide 1 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/me.jpg" alt="Picture of me">
-                        <div class="text">Passionate Cybersecurity Student dedicated to protecting digital assets and data.</div>
-                    </div>
-                    <!-- Slide 2 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/cybersecurity01.jpg" alt="cybersecurity stock photo"> 
-                        <div class="text">Currently pursuing an education in Cybersecurity with a focus on ethical hacking and incident response.</div>
-                    </div>
-                    <!-- Slide 3 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/cybersecurity02.jpg" alt="cybersecurity stock photo">
-                        <div class="text">Proficient in network security, penetration testing, and vulnerability assessment.</div>
-                    </div>
-                    <!-- Slide 4 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/wireshark.png" alt="Wireshark Logo">
-                        <div class="text">Hands-on experience with tools like Wireshark and Burp Suite</div>
-                    </div>
-                    <!-- Slide 5 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/comptiasecurity.png" alt="CompTIA Security+ Logo"> 
-                        <div class="text">Working on multiple certifications, including CompTIA Security+, Google Cybersecurity Professional Certificate, and TryHackMe SOC Level 1 Certificate.</div>
-                    </div>
-                    <!-- Slide 6 of 6 -->
-                    <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="images/contact.jpg" alt="contact photo"> 
-                        <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Get in touch with me today!</a></div> 
-                    </div>
-                    <!-- Previous and next buttons -->
-                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                <br> <!-- Adds a space between the slideshow images and the dots -->
-
-                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
-                <div style="text-align: center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span> 
-                    <span class="dot" onclick="currentSlide(4)"></span> 
-                    <span class="dot" onclick="currentSlide(5)"></span> 
-                    <span class="dot" onclick="currentSlide(6)"></span> 
-                </div>
-            </div>
-        </div>
-
-        <!-- About section -->
-        <div class="Row" id="About">
-            <!-- Left column -->
-            <div class="Column_2">
-                <img src="images/keyboard.jpg" alt="keyboard">
-            </div>
-            <!-- Right column -->
-            <div class="Column_1">
-                <h1>About</h1>
-                <p>Excited to embark on a new journey in Cybersecurity, I'm a student undergoing intensive training to pivot my career towards this dynamic field. With a background in operational excellence and team leadership from the hospitality sector, I'm now applying my strategic abilities to cybersecurity and eager to contribute innovative solutions to protect organizations from cyber threats.
-                    
-                </p>
-            </div>
-        </div>
-
-        <!-- GitHub section -->
-        <div class="Row" id="GitHub">
-            <!-- Left column -->
-            <div class="Column_1">
-                <h1>GitHub</h1>
-                <p>You can view my coding projects on my GitHub profile here:
-                    <br>
-                    <p class="center"><a href="https://github.com/kevinguarnes" target="_blank">Kevin Guarnes' Github</a></p>
-                </p>
-            </div>
-            <!-- Right column -->
-            <div class="Column_2">
-                <a href="https://github.com/kevinguarnes" target="_blank"><img src="images/github.jpg" alt="funny github meme"></a>
-            </div>
-        </div>
-
-        <!-- Contact form -->
-        <div id="Contact">
-           <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
-           <div class="form-popup" id="myForm">
-                <form action="https://formspree.io/f/xpzvepqz" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
-                    <h1>Contact</h1>
-                    <label for="name"><b>Name</b></label>
-                      <input type="text" placeholder="Type your name here" name="name" required>
-                    <label for="phone"><b>Phone</b></label>
-                      <input type="text" placeholder="Type your phone number here" name="phone">
-                    <label for="email"><b>Email</b></label>		
-                      <input type="text" placeholder="Type your email address here" name="email" required>
-                    <label for="message"><b>Message</b></label>
-                      <input type="text" placeholder="Type your message here" name="message">
-         
-                    <button type="submit" class="btn">SUBMIT</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
-                </form>
-           </div>
-        </div>
-        
-        <!-- Footer section -->
-
-         <footer>
-			<p class="center">
-				<a href="https://x.com/kevinguarnes" target="_blank"><i class="fab fa-twitter"></i> X.com</a> |
-				<a href="https://instagram.com/kevingeee" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
-				<a href="https://linkedin.com/in/kevinguarnes" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-				 <a href="https://facebook.com/kevinguarnes" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
-				 <a href="mailto:kevinguarnes@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+    <!-- Footer section -->
+     <footer>
+        <p class="center">
+            <a href="https://x.com/kevinguarnes" target="_blank"><i class="fab fa-twitter"></i> X.com</a> |
+            <a href="https://instagram.com/kevingeee" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="https://linkedin.com/in/kevinguarnes" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+             <a href="https://facebook.com/kevinguarnes" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+             <a href="mailto:kevinguarnes@gmail.com"><i class="fas fa-envelope"></i> Email</a>
         </p>
-			</p>
-			<p class="center">&copy; 2024 Kevin Guarnes. All rights reserved.</p>
-		</footer>
-        <script src="js/portfolio.js"></script>
-    </body>
+        <p class="center">&copy; 2024 Kevin Guarnes. All rights reserved.</p>
+    </footer>
+
+    <script src="js/portfolio.js"></script>
+</body>
 </html>
